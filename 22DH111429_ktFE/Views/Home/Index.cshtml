@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+<header class="top-header">
+    <div class="logo">amazon<span>.clone</span></div>
+    <div class="deliver"><i class="fas fa-map-marker-alt"></i><div><small>Deliver to</small><b>Vietnam</b></div></div>
+    <div class="search"><select><option>All</option><option>Fashion</option><option>Shoes</option></select><input type="text" placeholder="Search Amazon Clone" /><button><i class="fas fa-search"></i></button></div>
+    <div class="head-link"><small>Hello, sign in</small><b>Account & Lists</b></div>
+    <div class="head-link"><small>Returns</small><b>& Orders</b></div>
+    <div class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cartCount">6</span><b>Cart</b></div>
+</header>
+
+<nav class="nav-bar"><span><i class="fas fa-bars"></i> All</span><span>Today's Deals</span><span>Customer Service</span><span>Registry</span><span>Gift Cards</span><span>Sell</span></nav>
+
+<main class="page">
+    <section class="left-col">
+        <div class="cart-card">
+            <div class="cart-title-row"><h1>Shopping Cart</h1><a href="#">Deselect all items</a></div>
+            <div class="price-label">Price</div>
+
+            <article class="cart-item" data-price="129.99">
+                <input class="check" type="checkbox" checked />
+                <img src="@Url.Content("~/Content/images/túi kem mưới.jfif")" alt="Cream handbag" />
+                <div class="item-info">
+                    <h2>túi màu kem siêu dễ thương</h2>
+                    <p class="stock">In Stock</p><p class="small">FREE Returns &nbsp; | &nbsp; Eligible for FREE Shipping</p>
+                    <div class="qty-row"><button class="minus">−</button><span class="qty">1</span><button class="plus">+</button><button class="delete">Delete</button><button class="save">Save for later</button></div>
+                </div>
+                <strong class="item-total">$129.99</strong>
+            </article>
+
+            <article class="cart-item" data-price="89.99">
+                <input class="check" type="checkbox" checked />
+                <img src="@Url.Content("~/Content/images/hoài linh.jfif")" alt="Sky blue pump" />
+                <div class="item-info">
+                    <h2>hoài linh và bộ áo dài truyền thống việt nam</h2>
+                    <p class="stock">In Stock</p><p class="small">FREE Returns &nbsp; | &nbsp; Eligible for FREE Shipping</p>
+                    <div class="qty-row"><button class="minus">−</button><span class="qty">2</span><button class="plus">+</button><button class="delete">Delete</button><button class="save">Save for later</button></div>
+                </div>
+                <strong class="item-total">$179.98</strong>
+            </article>
+
+            <article class="cart-item" data-price="24.99">
+                <input class="check" type="checkbox" checked />
+                <img src="@Url.Content("~/Content/images/heel-pink.jfif")" alt="Pink blouse" />
+                <div class="item-info">
+                    <h2>giày màu hồng mang đau cả chân</h2>
+                    <p class="stock">In Stock</p><p class="small">FREE Returns &nbsp; | &nbsp; Eligible for FREE Shipping</p>
+                    <div class="qty-row"><button class="minus">−</button><span class="qty">3</span><button class="plus">+</button><button class="delete">Delete</button><button class="save">Save for later</button></div>
+                </div>
+                <strong class="item-total">$74.97</strong>
+            </article>
+
+            <div class="cart-subtotal">Subtotal (<span id="totalItems">6</span> items): <strong id="cartSubtotal">$384.94</strong></div>
+        </div>
+
+        <div class="recommend-card">
+            <h2>Customers who bought items in your cart also bought</h2>
+            <div class="recommend-grid">
+                <div class="rec-item"><img src="@Url.Content("~/Content/images/túi mưới.jfif")" alt="Black handbag" /><h3>Classic Black Handbag</h3><div class="stars">★★★★★</div><b>$69.99</b><button>Add to Cart</button></div>
+                <div class="rec-item"><img src="@Url.Content("~/Content/images/sneaker-black.jfif")" alt="Sneaker" /><h3>White & Black Casual Sneaker</h3><div class="stars">★★★★☆</div><b>$54.99</b><button>Add to Cart</button></div>
+                <div class="rec-item"><img src="@Url.Content("~/Content/images/áo đẹp.jfif")" alt="Lilac blouse" /><h3>Soft Lilac Everyday Blouse</h3><div class="stars">★★★★★</div><b>$29.99</b><button>Add to Cart</button></div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="right-col">
+        <div class="summary-card">
+            <h2>Subtotal (<span id="sideItems">6</span> items): <span id="sideSubtotal">$384.94</span></h2>
+            <label><input type="checkbox" /> This order contains a gift</label>
+            <button class="checkout"><i class="fas fa-lock"></i> Proceed to checkout</button>
+        </div>
+        <div class="prime-card"><h3><i class="fas fa-crown"></i> Save more with Prime</h3><p>Free delivery, exclusive deals, and more benefits.</p><button>Try Prime</button></div>
+        <div class="help-card"><h3>Need help?</h3><p>Returns are easy. Items can be returned within the eligible return period.</p><a href="#">Learn more about returns</a></div>
+    </aside>
+</main>
+
+<footer><div><h3>Get to Know Us</h3><a>Careers</a><a>About Us</a><a>Press Releases</a></div><div><h3>Make Money with Us</h3><a>Sell on Amazon</a><a>Affiliate Program</a><a>Advertise Products</a></div><div><h3>Let Us Help You</h3><a>Your Account</a><a>Shipping Rates</a><a>Returns & Replacements</a></div><div><h3>Payment Products</h3><a>Business Card</a><a>Shop with Points</a><a>Reload Your Balance</a></div></footer>
+<div class="footer-bottom">amazon<span>.clone</span> &nbsp; | &nbsp; Conditions of Use &nbsp; Privacy Notice &nbsp; © 2026 Amazon Clone</div>
+
+@section scripts {
+    <script src="@Url.Content("~/Scripts/amazon.js")"></script>
+}
